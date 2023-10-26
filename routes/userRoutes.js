@@ -28,5 +28,6 @@ router.get('/users/following/:userId', controller.getFollowers)
 
 // get all user
 router.get('/users/all',protect,controller.getAllUser)
+router.get('/users/sample', controller.sample)
 
 export default router

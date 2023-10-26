@@ -210,7 +210,18 @@ export const getAllUser = async(req,res) => {
 }
 
 
-  
+export const sample = async(req,res) => {
+    const user = await userModel.find()
+
+    let users = []
+    user.map((u) => {
+        const{_id, username, profilePicture} = u
+        users.push({_id,username,profilePicture})
+    })
+
+    res.status(200).json(users)
+}
+
 
 
 
